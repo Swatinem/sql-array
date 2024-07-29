@@ -1,0 +1,14 @@
+[package]
+name = "sql-array"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+divan = "0.1.14"
+postgres = { version = "0.19.8", features = ["array-impls"] }
+rusqlite = { version = "0.32.1", features = ["array", "bundled"] }
+
+[[bench]]
+name = "benches"
+harness = false
